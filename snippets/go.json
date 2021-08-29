@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "prefix": "im",
+    "body": "import (\n\t\"${1:package}\"\n)",
+    "description": "Snippet for a import block"
+  }
+}
