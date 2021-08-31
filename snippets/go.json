@@ -5,8 +5,8 @@
     "description": "Snippet for a import block"
   },
   "defer statement": {
-    "prefix": "df",
     "body": "defer ${1:func}($0)",
+    "prefix": "defer",
     "description": "Snippet for defer statement"
   },
   "if statement": {
@@ -25,7 +25,7 @@
     "description": "Snippet for if else"
   },
   "if err != nil": {
-    "prefix": "ifer",
+    "prefix": "iferr",
     "body": "if err != nil {\n\t${1:return ${2:nil, }${3:err}}\n}",
     "description": "Snippet for if err != nil"
   },
