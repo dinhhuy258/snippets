@@ -29,6 +29,11 @@
     "body": "fun ${1}(${2}) {\n\t$0\n}",
     "description": "Snippet for function declaration"
   },
+  "private function declaration": {
+    "prefix": "funp",
+    "body": "private fun ${1}(${2}) {\n\t$0\n}",
+    "description": "Snippet for function declaration"
+  },
   "variable declaration": {
     "prefix": "var",
     "body": "var ${1:name} = ${2:value}",
