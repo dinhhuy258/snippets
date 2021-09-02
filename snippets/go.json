@@ -1,6 +1,6 @@
 {
   "imports": {
-    "prefix": "im",
+    "prefix": "import",
     "body": "import (\n\t\"${1:package}\"\n)",
     "description": "Snippet for a import block"
   },
@@ -9,18 +9,33 @@
     "prefix": "defer",
     "description": "Snippet for defer statement"
   },
+  "switch statement": {
+    "prefix": "switch",
+    "body": "switch ${1:expression} {\ncase ${2:condition}:\n\t$0\n}",
+    "description": "Snippet for switch statement"
+  },
+  "select statement": {
+    "prefix": "select",
+    "body": "select {\ncase ${1:condition}:\n\t$0\n}",
+    "description": "Snippet for select statement"
+  },
+  "case clause": {
+    "prefix": "case",
+    "body": "case ${1:condition}:$0",
+    "description": "Snippet for case clause"
+  },
   "if statement": {
     "prefix": "if",
     "body": "if ${1:condition} {\n\t$0\n}",
     "description": "Snippet for if statement"
   },
   "else branch": {
-    "prefix": "el",
+    "prefix": "else",
     "body": "else {\n\t$0\n}",
     "description": "Snippet for else branch"
   },
   "if else statement": {
-    "prefix": "ifel",
+    "prefix": "ifelse",
     "body": "if ${1:condition} {\n\t$2\n} else {\n\t$0\n}",
     "description": "Snippet for if else"
   },
@@ -36,11 +51,11 @@
   },
   "for range statement": {
     "prefix": "forr",
-    "body": "for ${1:_, }${2:v} := range ${3:v} {\n\t$0\n}",
+    "body": "for ${1:_},${2:v} := range ${3:v} {\n\t$0\n}",
     "description": "Snippet for a for range loop"
   },
   "channel declaration": {
-    "prefix": "ch",
+    "prefix": "chan",
     "body": "chan ${1:type}",
     "description": "Snippet for a channel"
   },
@@ -54,18 +69,23 @@
     "body": "make(${1:type}, ${2:0})",
     "description": "Snippet for make statement"
   },
+  "new(...)": {
+    "prefix": "new",
+    "body": "new(${1:type})",
+    "description": "Snippet for new statement"
+  },
   "goroutine anonymous function": {
-    "prefix": "go",
+    "prefix": "gof",
     "body": "go func($1) {\n\t$0\n}($2)",
     "description": "Snippet for anonymous goroutine declaration"
   },
   "goroutine function": {
-    "prefix": "gof",
+    "prefix": "go",
     "body": "go ${1:func}($0)",
     "description": "Snippet for goroutine declaration"
   },
   "method declaration": {
-    "prefix": "meth",
+    "prefix": "method",
     "body": "func (${1:receiver} ${2:type}) ${3:method}($4) $5 {\n\t$0\n}",
     "description": "Snippet for method declaration"
   },
@@ -73,5 +93,45 @@
     "prefix": "func",
     "body": "func $1($2) $3 {\n\t$0\n}",
     "description": "Snippet for function declaration"
+  },
+  "type interface declaration": {
+    "prefix": "typei",
+    "body": "type ${1:name} interface {\n\t$0\n}",
+    "description": "Snippet for a type interface"
+  },
+  "type struct declaration": {
+    "prefix": "types",
+    "body": "type ${1:name} struct {\n\t$0\n}",
+    "description": "Snippet for a struct declaration"
+  },
+  "test function": {
+    "prefix": "testf",
+    "body": "func Test$1(t *testing.T) {\n\t$0\n}",
+    "description": "Snippet for Test function"
+  },
+  "test main": {
+    "prefix": "testm",
+    "body": "func TestMain(m *testing.M) {\n\t$1\n\n\tos.Exit(m.Run())\n}",
+    "description": "Snippet for TestMain function"
+  },
+  "fmt.Println": {
+    "prefix": "fmtp",
+    "body": "fmt.Println(\"$1\")",
+    "description": "Snippet for fmt.Println()"
+  },
+  "fmt.Printf": {
+    "prefix": "fmtf",
+    "body": "fmt.Printf(\"$1\", ${2:var})",
+    "description": "Snippet for fmt.Printf()"
+  },
+  "log.Println": {
+    "prefix": "logp",
+    "body": "log.Println(\"$1\")",
+    "description": "Snippet for log.Println()"
+  },
+  "log.Printf": {
+    "prefix": "logf",
+    "body": "log.Printf(\"$1\", ${2:var})",
+    "description": "Snippet for log.Printf()"
   }
 }
