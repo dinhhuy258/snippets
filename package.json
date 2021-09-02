@@ -9,6 +9,10 @@
       {
         "language": "kotlin",
         "path": "./snippets/kotlin.json"
+      },
+      {
+        "language": "markdown",
+        "path": "./snippets/markdown.json"
       }
     ]
   }
