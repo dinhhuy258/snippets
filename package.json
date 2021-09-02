@@ -5,8 +5,11 @@
       {
         "language": "go",
         "path": "./snippets/go.json"
+      },
+      {
+        "language": "kotlin",
+        "path": "./snippets/kotlin.json"
       }
     ]
   }
 }
-
