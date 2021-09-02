@@ -1,0 +1,111 @@
+{
+  "function __construct": {
+    "prefix": "construct",
+    "body": [
+      "${1:public} function __construct($2)",
+      "{",
+      "\t$0",
+      "}"
+    ]
+  },
+  "function …": {
+    "prefix": "function",
+    "body": [
+      "${1:public} function ${2:FunctionName}($3)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Function"
+  },
+  "do … while …": {
+    "prefix": "do",
+    "body": [
+      "do {",
+      "\t$0",
+      "} while ($1);"
+    ],
+    "description": "Do-While loop"
+  },
+  "while …": {
+    "prefix": "while",
+    "body": [
+      "while ($1) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "While-loop"
+  },
+  "if …": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If block"
+  },
+  "if … else …": {
+    "prefix": "ifelse",
+    "body": [
+      "if (${1:condition}) {",
+      "\t$2",
+      "} else {",
+      "\t$3",
+      "}"
+    ],
+    "description": "If Else block"
+  },
+  "for …": {
+    "prefix": "for",
+    "body": [
+      "for (\\$${1:i}=${2:0}; \\$${1:i} < ${3:5}; \\$${1:i}++) { ",
+      "\t$0",
+      "}"
+    ],
+    "description": "For-loop"
+  },
+  "foreach …": {
+    "prefix": "foreach",
+    "body": [
+      "foreach (\\$${1:variable} as \\$${2:key} => \\$${3:${4:value}}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Foreach loop"
+  },
+  "switch …": {
+    "prefix": "switch",
+    "body": [
+      "switch (\\$${1:variable}) {",
+      "\tcase '${2:value}':",
+      "\t\t$3",
+      "\t\tbreak;",
+      "\tdefault:",
+      "\t\t$4",
+      "\t\tbreak;",
+      "}"
+    ],
+    "description": "Switch block"
+  },
+  "case …": {
+    "prefix": "case",
+    "body": [
+      "case '${1:value}':",
+      "\t$0",
+      "\tbreak;"
+    ],
+    "description": "Case Block"
+  },
+  "try catch": {
+    "prefix": "try",
+    "body": [
+      "try {",
+      "\t$1",
+      "} catch (${2:\\Throwable} ${3:\\$e}) {",
+      "\t$4",
+      "}"
+    ],
+    "description": "Try catch block"
+  }
+}

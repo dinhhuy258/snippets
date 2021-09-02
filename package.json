@@ -11,6 +11,10 @@
         "path": "./snippets/kotlin.json"
       },
       {
+        "language": "php",
+        "path": "./snippets/php.json"
+      },
+      {
         "language": "markdown",
         "path": "./snippets/markdown.json"
       }
