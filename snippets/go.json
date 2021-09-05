@@ -122,7 +122,7 @@
   "method declaration": {
     "prefix": "method",
     "body": [
-      "func (${1:receiver} ${2:type}) ${3:method}($4) $5 {",
+      "func (${1:receiver} ${2:type}) ${3:method}($4)$5 {",
       "\t$0",
       "}"
     ],
