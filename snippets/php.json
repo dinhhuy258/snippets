@@ -8,16 +8,6 @@
       "}"
     ]
   },
-  "function …": {
-    "prefix": "function",
-    "body": [
-      "${1:public} function ${2:FunctionName}($3)",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "Function"
-  },
   "do … while …": {
     "prefix": "do",
     "body": [
